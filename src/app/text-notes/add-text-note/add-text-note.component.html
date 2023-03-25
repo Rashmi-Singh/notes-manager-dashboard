@@ -1,0 +1,12 @@
+<form [formGroup]="textNoteFG" class="form-container">
+    <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+
+        <mat-error *ngIf="textNoteFG.controls['description'].hasError('required')">
+            Description is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <app-button-group [form]="textNoteFG" (formData)="saveFormData($event)"></app-button-group>
+</form>

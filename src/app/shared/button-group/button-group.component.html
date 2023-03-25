@@ -1,0 +1,4 @@
+<div class="button-container">
+    <button mat-raised-button color="primary" (click)="save()" [disabled]="form.invalid">Save</button>
+    <button mat-raised-button (click)="form.reset()" [disabled]="form.pristine">Clear</button>
+</div>

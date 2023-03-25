@@ -1,0 +1,41 @@
+.app-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.app-sidenav {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    left: 0;
+}
+
+.app-sidenav-container {
+    display: flex;
+    overflow: hidden !important; /* stylelint-disable-line declaration-no-important */
+    align-items: top;
+    justify-content: center;
+    width: 20%;
+
+    transition: all 0.5s linear;
+
+    background: white;
+}
+
+.main-content-wrapper {
+    height: calc(100vh - 4rem);
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+}
+
+.sidenav-list-item {
+    margin: 0.5rem 1rem;
+    width: 90% !important;
+
+    &:hover {
+        color: #669acc;
+        border-right: 4px solid #669acc;
+        background: none;
+    }
+}

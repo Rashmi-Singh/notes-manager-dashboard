@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <h1 class="app-title">Notes Manager</h1>
+</mat-toolbar>
+<mat-sidenav-container class="app-sidenav" autosize>
+    <mat-sidenav class="app-sidenav-container" mode="side" opened>
+        <mat-nav-list>
+            <a mat-list-item class="sidenav-list-item" routerLink="/text-notes">Text Notes</a>
+            <a mat-list-item class="sidenav-list-item" routerLink="/article-notes">Article Notes</a>
+            <a mat-list-item class="sidenav-list-item" routerLink="/picture-notes">Picture Notes</a>
+            <a mat-list-item class="sidenav-list-item" routerLink="/document-notes">Document Notes</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="main-content-wrapper">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

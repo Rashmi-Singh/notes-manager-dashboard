@@ -1,0 +1,52 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    margin: 1rem 3rem;
+    justify-content: space-between;
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.button-container {
+    width: 15rem;
+    justify-content: space-between;
+    display: flex;
+}
+
+.list-section {
+    margin-top: 2rem;
+
+    .list-title {
+        font-size: 2rem;
+        padding: 1rem 0;
+        border-top: 1px solid lightgrey;
+    }
+}
+
+.notes-list-item {
+    border-bottom: 1px solid lightgrey;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 40%;
+}
+
+.note-title {
+    font-weight: 600;
+}
+
+.row-align-center {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,19 @@
+<div>
+    <div class="header">
+        <div class="header-title">Text Notes</div>
+        <button mat-raised-button color="primary" *ngIf="!showAddForm" (click)="showAddForm = !showAddForm">Add
+            New</button>
+        <button mat-raised-button color="primary" *ngIf="showAddForm" (click)="showAddForm = !showAddForm">Back</button>
+    </div>
+    <app-add-text-note *ngIf="showAddForm"></app-add-text-note>
+
+    <div class="list-section" *ngIf="notesList?.length">
+        <div class="list-title">Your notes</div>
+        <div class="notes-list-item" *ngFor="let item of notesList">
+            <span>{{item.description}}</span>
+            <button mat-icon-button matTooltip="Delete" (click)="deleteNote(item.id)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

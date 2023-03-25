@@ -1,0 +1,21 @@
+<div>
+    <div class="header">
+        <div class="header-title">Article Notes</div>
+        <button mat-raised-button color="primary" *ngIf="!showAddForm" (click)="showAddForm = !showAddForm">Add
+            New</button>
+        <button mat-raised-button color="primary" *ngIf="showAddForm" (click)="showAddForm = !showAddForm">Back</button>
+    </div>
+    <app-add-article-note *ngIf="showAddForm"></app-add-article-note>
+
+    <div class="list-section" *ngIf="notesList?.length">
+        <div class="list-title">Your notes</div>
+        <div class="notes-list-item" *ngFor="let item of notesList">
+            <div class="row-align-center">
+                <span class="note-title">{{item.title}}</span><pre> - </pre>{{item.description}}
+            </div>
+            <button mat-icon-button matTooltip="Delete" (click)="deleteNote(item.id)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<form [formGroup]="documentNoteFG" class="form-container">
+    <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input type="text" matInput formControlName="title">
+
+        <mat-error *ngIf="documentNoteFG.controls['title'].hasError('required')">
+            Title is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Document Type</mat-label>
+        <input matInput type="text" formControlName="documentType">
+
+        <mat-error *ngIf="documentNoteFG.controls['documentType'].hasError('required')">
+            Document Type is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <app-file-upload [form]="documentNoteFG" controlName="file" [data]="fileData"></app-file-upload>
+
+    <app-button-group [form]="documentNoteFG" (formData)="saveFormData($event)"></app-button-group>
+</form>

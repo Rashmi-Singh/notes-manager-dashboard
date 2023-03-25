@@ -1,0 +1,11 @@
+<div>
+    <div class="header">
+        <div class="header-title">Picture Notes</div>
+        <button mat-raised-button color="primary" *ngIf="!showAddForm" (click)="showAddForm = !showAddForm">Add
+            New</button>
+        <button mat-raised-button color="primary" *ngIf="showAddForm" (click)="showAddForm = !showAddForm">Back</button>
+    </div>
+    <app-add-picture-note *ngIf="showAddForm"></app-add-picture-note>
+
+    <ng-template appNotesTable></ng-template>
+</div>

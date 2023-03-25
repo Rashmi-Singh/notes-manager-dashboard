@@ -1,0 +1,13 @@
+<mat-form-field>
+    <ngx-mat-file-input [formControl]="control" placeholder="Select" [multiple]="data.multiple" [accept]="data.accept"
+        [color]="data.color" (ngModelChange)="setPreviewURL($event)"></ngx-mat-file-input>
+
+    <mat-error>
+        <div *ngIf="form.controls[controlName].hasError('required')">
+            Field is <strong>required</strong>
+        </div>
+        <div *ngIf="form.controls[controlName].hasError('maxSize')">
+            Size is <strong>more than {{data.maxSize}}KB</strong>
+        </div>
+    </mat-error>
+</mat-form-field>
